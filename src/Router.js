@@ -18,14 +18,14 @@ const AuthStack = createBottomTabNavigator(
 			screen: SignIn,
 			navigationOptions: {
 				title: 'Sign In',
-				tabBarIcon: ({ tintColor }) => <Icon name="log-in" style={{ color: tintColor }} />
+				tabBarIcon: ({ tintColor }) => <Icon name={'log-in'} style={{ color: tintColor }} />
 			}
 		},
 		SignUp: {
 			screen: SignUp,
 			navigationOptions: {
 				title: 'Sign Up',
-				tabBarIcon: ({ tintColor }) => <Icon name="person-add" style={{ color: tintColor }} />
+				tabBarIcon: ({ tintColor }) => <Icon name={'person-add'} style={{ color: tintColor }} />
 			}
 		}
 	},
