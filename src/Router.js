@@ -6,7 +6,8 @@ import {
 import { createAppContainer } from 'react-navigation';
 
 // native base
-import { Icon } from 'native-base';
+//import { Icon } from 'native-base';
+import { Icon } from 'react-native-elements'
 
 // auth stack
 import SignIn from './screens/SignIn';
@@ -18,14 +19,14 @@ const AuthStack = createBottomTabNavigator(
 			screen: SignIn,
 			navigationOptions: {
 				title: 'Sign In',
-				tabBarIcon: ({ tintColor }) => <Icon name={'log-in'} style={{ color: tintColor }} />
+				tabBarIcon: () => <Icon name='login' color='#fff' />
 			}
 		},
 		SignUp: {
 			screen: SignUp,
 			navigationOptions: {
 				title: 'Sign Up',
-				tabBarIcon: ({ tintColor }) => <Icon name={'person-add'} style={{ color: tintColor }} />
+				tabBarIcon: () => <Icon name='person-add' color='#fff' />
 			}
 		}
 	},
