@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -10,9 +10,9 @@ export default class SignIn extends Component {
 
   render() {
     return (
-      <View>
+      <SafeAreaView>
         <Text> Sign In </Text>
-      </View>
+      </SafeAreaView>
     );
   }
 }

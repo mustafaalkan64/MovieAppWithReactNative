@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React, {Component} from 'react';
+import {Body, Header, Title} from "native-base";
 
-export default class SignUp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
+import SignupForm from './SignupForm';
 
-  render() {
-    return (
-      <View>
-        <Text> Sign Up </Text>
-      </View>
-    );
-  }
+export default class Signup extends Component {
+	render() {
+		return (
+			<React.Fragment>
+				<Header>
+					<Body>
+						<Title>Signup</Title>
+					</Body>
+				</Header>
+				<SignupForm />
+			</React.Fragment>
+		);
+	}
 }
