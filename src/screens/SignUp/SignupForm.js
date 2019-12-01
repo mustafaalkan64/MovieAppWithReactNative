@@ -11,7 +11,6 @@ import validations from './validations';
 export default class SignupForm extends Component {
 	_handleSubmit = async ({ username, password }, bag) => {
 		try {
-			debugger;
 			const { data } = await axios.post(`${API_BASE}/register`, { username, password });
 			//await api(values);
 			bag.setSubmitting(false);
