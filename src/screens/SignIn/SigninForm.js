@@ -6,6 +6,10 @@ import {Formik} from "formik";
 //import api from '../../api/api';
 import validations from './validations';
 
+import {inject, observer} from 'mobx-react';
+
+//@inject('AuthStore')
+@observer
 export default class SigninForm extends Component {
 	_handleSubmit = async (values, bag) => {
 		try {

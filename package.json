@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "formik": "^2.0.6",
-    "mobx": "^5.15.0",
-    "mobx-react": "^6.1.4",
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3",
     "native-base": "^2.13.8",
     "react": "16.8.3",
     "react-native": "0.59.8",
@@ -24,13 +24,13 @@
   },
   "devDependencies": {
     "@babel/core": "7.7.4",
-    "@babel/plugin-proposal-decorators": "^7.7.4",
-    "@babel/preset-flow": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/runtime": "7.7.4",
     "babel-jest": "24.9.0",
     "jest": "24.9.0",
     "jetifier": "^1.6.5",
-    "metro-react-native-babel-preset": "^0.57.0",
+    "metro-react-native-babel-preset": "^0.53.1",
     "react-test-renderer": "16.8.3"
   },
   "jest": {
