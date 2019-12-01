@@ -4,9 +4,6 @@ import {Body, Header, Title} from "native-base";
 import SigninForm from './SigninForm';
 import {observer, inject} from 'mobx-react'
 
-@observer
-@inject('AuthStore')
-
 export default class SignIn extends Component {
 	constructor	(props){
 		super(props)
@@ -17,7 +14,7 @@ export default class SignIn extends Component {
 			<React.Fragment>
 				<Header>
 					<Body>
-						<Title>{AuthStore.username}</Title>
+						<Title>Sign In</Title>
 					</Body>
 				</Header>
 				<SigninForm />
