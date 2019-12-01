@@ -2,16 +2,27 @@ import React, { Component } from 'react';
 
 import {Button, Content, Input, Item, Spinner, Text} from "native-base";
 import {Formik} from "formik";
+import {API_BASE} from '../../constants';
+import axios from 'axios';
 
 //import api from '../../api/api';
 import validations from './validations';
 
 export default class SignupForm extends Component {
-	_handleSubmit = async (values, bag) => {
+	_handleSubmit = async ({ username, password }, bag) => {
 		try {
+			debugger;
+			const { data } = await axios.post(`${API_BASE}/register`, { username, password });
 			//await api(values);
 			bag.setSubmitting(false);
-			alert('welcome')
+
+			if (data.hasOwnProperty('errors')) {
+				bag.setErrors(data.errors);
+				return false;
+			}
+  
+			this.props.navigation.navigate('SignIn');
+
 		}catch (e) {
 			bag.setSubmitting(false);
 			bag.setErrors(e)
