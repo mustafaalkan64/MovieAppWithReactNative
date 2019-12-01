@@ -3,15 +3,36 @@ import {
 	createBottomTabNavigator
 } from "react-navigation-tabs";
 
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, 
+		 createSwitchNavigator  
+} from 'react-navigation';
+
+import { createStackNavigator
+} from 'react-navigation-stack';
 
 // native base
 //import { Icon } from 'native-base';
 import { Icon } from 'react-native-elements'
 
+// auth loading
+import AuthLoading from './screens/AuthLoading';
+// app stack
+import Home from './screens/Home';
+//import Detail from './screens/Detail';
+
 // auth stack
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
+
+
+const AppStack = createStackNavigator({
+	Home: {
+		screen: Home,
+		navigationOptions: {
+			title: 'Home',
+		}
+	}
+});
 
 const AuthStack = createBottomTabNavigator(
 	{
@@ -42,4 +63,17 @@ const AuthStack = createBottomTabNavigator(
 	}
 );
 
-export default createAppContainer(AuthStack);
+const SwitchNavigator = createSwitchNavigator(
+	{
+		AuthLoading: {
+			screen: AuthLoading
+		},
+		App: AppStack,
+		Auth: AuthStack,
+	},
+	{
+		initialRouteName: 'AuthLoading',
+	}
+);
+
+export default createAppContainer(SwitchNavigator);
